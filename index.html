@@ -8,17 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script type="module" src="script.js" defer></script>
+
 </head>
 <body>
 
     <div class="container">
         <header>
             <h1>GeoNotes</h1>
-            <p>Capture locations, add notes, and find them later.</p>
+            <div id="auth-container">
+                <div id="user-info" class="hidden">
+                    <img id="user-photo" src="" alt="User Photo">
+                    <span id="user-name"></span>
+                    <button id="signOutBtn" class="btn btn-secondary btn-small">Sign Out</button>
+                </div>
+                <button id="signInBtn" class="btn btn-primary">Sign In with Google</button>
+            </div>
         </header>
 
-        <main>
+        <main id="main-content" class="hidden">
             <section class="capture-card card">
                 <h2>Capture New Location</h2>
                 <button id="captureBtn" class="btn btn-primary">
@@ -46,7 +55,6 @@
             <section class="log-card card">
                 <div class="log-header">
                     <h2>Saved Locations</h2>
-                    <button id="exportBtn" class="btn btn-secondary btn-small">Export PDF</button>
                 </div>
                 <div class="search-wrapper">
                     <input type="text" id="searchInput" placeholder="Search in notes...">
@@ -61,6 +69,5 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
