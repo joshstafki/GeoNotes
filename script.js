@@ -6,14 +6,15 @@ import { getFirestore, collection, addDoc, query, orderBy, getDocs, serverTimest
 // --- This is your web app's Firebase configuration ---
 // It should be declared ONLY ONCE.
 // PLEASE USE A NEW, SECURE API KEY THAT YOU HAVE NOT SHARED.
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "USE_YOUR_NEW_SECURE_API_KEY_HERE",
-    authDomain: "geonotes-app-9ab52.firebaseapp.com",
-    projectId: "geonotes-app-9ab52",
-    storageBucket: "geonotes-app-9ab52.appspot.com", // Corrected this for you from the previous version
-    messagingSenderId: "747628008728",
-    appId: "1:747628008728:web:42a8b89cb588f7bfc63a6d",
-    measurementId: "G-GB0BBR6D9M"
+  apiKey: "AIzaSyCbD2E5pD6VLazXdzqpHuc0FhQe4Ap3bFg",
+  authDomain: "geonotes-app-9ab52.firebaseapp.com",
+  projectId: "geonotes-app-9ab52",
+  storageBucket: "geonotes-app-9ab52.firebasestorage.app",
+  messagingSenderId: "747628008728",
+  appId: "1:747628008728:web:42a8b89cb588f7bfc63a6d",
+  measurementId: "G-GB0BBR6D9M"
 };
 
 // --- Initialize Firebase and its services ---
