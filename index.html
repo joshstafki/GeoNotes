@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoNotes - Location Logger</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>GeoNotes</h1>
+            <p>Capture locations, add notes, and find them later.</p>
+        </header>
+
+        <main>
+            <section class="capture-card card">
+                <h2>Capture New Location</h2>
+                <button id="captureBtn" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    Capture My Location
+                </button>
+                <div id="status" class="status-message"></div>
+                <div id="capture-details" class="capture-details-hidden">
+                    <div class="coords-display">
+                        <strong>Coordinates:</strong> <span id="coords">N/A</span>
+                    </div>
+                    <textarea id="notesInput" placeholder="Add notes about this location..."></textarea>
+                    <div class="file-input-wrapper">
+                        <label for="photoInput" class="btn btn-secondary">Add Photo</label>
+                        <input type="file" id="photoInput" accept="image/*">
+                        <span id="fileName">No file chosen</span>
+                    </div>
+                    <img id="imagePreview" src="" alt="Image Preview" class="image-preview-hidden"/>
+                    <button id="saveBtn" class="btn btn-success">Save Location</button>
+                </div>
+            </section>
+
+            <section class="log-card card">
+                <div class="log-header">
+                    <h2>Saved Locations</h2>
+                    <button id="exportBtn" class="btn btn-secondary btn-small">Export PDF</button>
+                </div>
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search in notes...">
+                </div>
+                <div id="locationsList">
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 GeoNotes App. Created by Gemini.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
