@@ -123,7 +123,10 @@ const renderLocations = (locationsToRender) => {
         locationItem.className = 'location-item';
         
         const photoHTML = location.photo ? `<img src="${location.photo}" alt="Note photo">` : '';
-        const mapLink = \https://www.google.com/maps?q=${location.lat},${location.lon}`;`
+        
+        // This line MUST use backticks (`)
+        const mapLink = `https://www.google.com/maps?q=${location.lat},${location.lon}`;
+        
         // Firestore timestamps need to be converted to JS dates to be readable
         const timestamp = location.createdAt ? location.createdAt.toDate().toLocaleString() : 'Just now';
 
